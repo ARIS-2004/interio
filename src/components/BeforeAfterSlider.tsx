@@ -67,8 +67,7 @@ const BeforeAfterSlider = ({
   return (
     <div 
       ref={containerRef}
-      className={`relative overflow-hidden rounded-3xl cursor-grab active:cursor-grabbing select-none shadow-2xl border-4 border-white/20 backdrop-blur-sm ${className}`}
-      style={{ aspectRatio: '16/10' }}
+      className={`relative overflow-hidden rounded-3xl cursor-grab active:cursor-grabbing select-none shadow-2xl border-4 border-white/20 backdrop-blur-sm h-96 ${className}`}
     >
       {/* Premium Glow Effect */}
       <div className="absolute -inset-1 bg-gradient-to-r from-accent via-purple-500 to-pink-500 rounded-3xl blur-sm opacity-30 animate-pulse" />

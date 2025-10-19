@@ -59,8 +59,8 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Quick Links & Services - Side by side on mobile */}
-          <div className="grid grid-cols-2 md:grid-cols-1 lg:grid-cols-1 gap-8 md:gap-0 md:col-span-2 lg:col-span-2">
+          {/* Quick Links & Services - Side by side on mobile and desktop */}
+          <div className="grid grid-cols-2 gap-8 md:col-span-2 lg:col-span-2">
             {/* Quick Links */}
             <div>
               <h3 className="font-display text-xl mb-6 bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent">Quick Links</h3>

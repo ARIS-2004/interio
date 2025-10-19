@@ -153,7 +153,7 @@ const Home = () => {
             </div>
           </div>
           
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {filteredImages.map((item, index) => (
               <div
                 key={index}

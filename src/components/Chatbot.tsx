@@ -58,14 +58,14 @@ const Chatbot = () => {
               href={option.href}
               target={option.label === "WhatsApp" ? "_blank" : "_self"}
               rel={option.label === "WhatsApp" ? "noopener noreferrer" : ""}
-              className={`group absolute w-14 h-14 bg-gradient-to-br ${
+              className={`group absolute w-12 h-12 bg-gradient-to-br ${
                 option.color
               } transition-all duration-700 hover:w-32 hover:translate-x-[-72px] hover:scale-105 hover:shadow-2xl flex items-center justify-center overflow-hidden border-2 border-white/20 hover:border-white/40 ${
                 index === 0
                   ? "rounded-t-2xl top-1"
                   : index === 1
-                  ? "top-16"
-                  : "rounded-b-2xl top-32"
+                  ? "top-14"
+                  : "rounded-b-2xl top-28"
               }`}
               style={{
                 animationDelay: `${index * 0.3}s`,
@@ -112,7 +112,7 @@ const Chatbot = () => {
         <div className="relative">
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="relative w-16 h-16 bg-gradient-to-br from-purple-500 via-blue-500 to-cyan-500 rounded-full shadow-2xl hover:shadow-purple-500/50 transition-all duration-500 hover:scale-110 flex items-center justify-center group overflow-hidden"
+            className="relative w-14 h-14 bg-gradient-to-br from-purple-500 via-blue-500 to-cyan-500 rounded-full shadow-2xl hover:shadow-purple-500/50 transition-all duration-500 hover:scale-110 flex items-center justify-center group overflow-hidden"
           >
             {/* Rotating ring */}
             <div className="absolute inset-0 border-2 border-white/30 rounded-full animate-spin"></div>
@@ -170,7 +170,7 @@ const Chatbot = () => {
             <div className="p-4 h-64 overflow-y-auto bg-gray-50">
               <div className="mb-4">
                 <div className="bg-white rounded-lg p-3 shadow-sm max-w-xs">
-                  <p className="text-sm">
+                  <p className="text-sm text-black">
                     Hi there! 👋 I'm here to help you with your interior design
                     needs. How can I assist you today?
                   </p>

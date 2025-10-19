@@ -104,10 +104,11 @@ const PanoramaViewer = ({ image, title = "360° View", className = "" }: Panoram
   }, [image]);
 
   return (
-    <div 
-      ref={containerRef}
-      className={`relative overflow-hidden rounded-3xl bg-gradient-to-br from-black via-gray-900 to-black shadow-2xl border-4 border-white/20 ${className} ${isFullscreen ? 'fixed inset-0 z-50 rounded-none border-0' : ''}`}
-      style={{ aspectRatio: isFullscreen ? 'auto' : '16/9', maxHeight: isFullscreen ? 'none' : '80vh' }}
+    <div className={className}>
+      <div 
+        ref={containerRef}
+        className={`relative overflow-hidden rounded-3xl bg-gradient-to-br from-black via-gray-900 to-black shadow-2xl border-4 border-white/20 ${isFullscreen ? 'fixed inset-0 z-50 rounded-none border-0' : 'h-96'}`}
+        style={{ aspectRatio: isFullscreen ? 'auto' : undefined, maxHeight: isFullscreen ? 'none' : undefined }}
     >
       {/* Premium Glow Effect */}
       <div className="absolute -inset-1 bg-gradient-to-r from-accent via-purple-500 to-pink-500 rounded-3xl blur-sm opacity-20 animate-pulse" />
@@ -138,12 +139,6 @@ const PanoramaViewer = ({ image, title = "360° View", className = "" }: Panoram
       </div>
 
       {/* Premium Controls */}
-      <div className="absolute top-4 left-4 flex gap-3 z-20">
-        <div className="bg-gradient-to-r from-black/80 via-gray-900/80 to-black/80 text-white px-4 py-2 rounded-2xl text-sm font-bold flex items-center gap-2 backdrop-blur-md border border-white/20 shadow-xl">
-          <Move3D size={18} className="text-accent" />
-          <span className="bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">{title}</span>
-        </div>
-      </div>
 
       <div className="absolute top-4 right-4 flex gap-3 z-20">
         <Button
@@ -184,6 +179,19 @@ const PanoramaViewer = ({ image, title = "360° View", className = "" }: Panoram
           </div>
         </div>
       )}
+      </div>
+      
+      {/* Title and Instructions below image */}
+      <div className="mt-6 text-center">
+        <div className="flex items-center justify-center gap-2 mb-2">
+          <Move3D size={18} className="text-accent" />
+          <h3 className="text-xl font-bold">{title}</h3>
+        </div>
+        <p className="text-sm text-muted-foreground font-medium">
+          <span className="text-accent font-bold">Drag</span> to explore • 
+          <span className="text-accent font-bold">Click fullscreen</span> for immersive view
+        </p>
+      </div>
     </div>
   );
 };

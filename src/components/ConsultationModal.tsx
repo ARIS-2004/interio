@@ -39,7 +39,7 @@ const ConsultationModal = ({ isOpen, onClose }: ConsultationModalProps) => {
   return (
     <div className="max-sm:px-[5px] sm:px-8">
       <Dialog open={isOpen} onOpenChange={onClose}>
-        <DialogContent className="max-w-4xl max-sm:max-w-[calc(100vw-10px)] p-0 bg-white rounded-2xl overflow-hidden border-0 shadow-2xl">
+        <DialogContent className="max-w-3xl max-sm:max-w-[calc(100vw-10px)] p-0 bg-white rounded-2xl overflow-hidden border-0 shadow-2xl">
         <DialogTitle className="sr-only">Free Design Consultation</DialogTitle>
 
 
@@ -51,7 +51,7 @@ const ConsultationModal = ({ isOpen, onClose }: ConsultationModalProps) => {
           <X size={16} />
         </button>
 
-        <div className="flex h-[600px] max-sm:h-auto max-sm:w-full">
+        <div className="flex h-[500px] max-sm:h-auto max-sm:w-full">
           {/* Left side - Image */}
           <div className="w-1/2 max-sm:w-2/5 relative">
             {/* Logo on image side */}
